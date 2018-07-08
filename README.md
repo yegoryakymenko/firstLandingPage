@@ -1,1 +1,1 @@
-<a href="https://yegoryakymenko.github.io/firstLandingPage/"</a>
+https://yegoryakymenko.github.io/firstLandingPage/
