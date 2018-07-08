@@ -1,0 +1,417 @@
+html {
+	font-family: 'Gotham Pro';
+    font-weight: 500;
+    font-style: normal;
+	box-sizing: border-box;
+	background-color: #f2f2f2;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	line-height: 1;
+}
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 20px 3%;
+}
+.header.active {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background: #f2f2f2;
+	width: 100%;
+	animation-name: opacity;
+    animation-duration: .7s;
+
+}
+@keyframes opacity{
+	from {opacity: 0;}
+	to   {opacity: 1;}
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+.social i , .category-select, .language, .burger {
+	cursor: pointer;
+}
+
+.header-item-logo a{
+	display: inline-block;
+	background: url('http://prodan-design.com.ua/content/images/logo_small.png'), center center no-repeat;
+	background-size: cover;
+	width: 38px;
+	height: 71px;
+}
+
+.navbar-top {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-grow: 1;
+}
+.navbar-top-item {
+	flex-grow: 1;
+}
+.navbar-item, .navbar-top-item {
+	margin-left: 20px;
+}
+.navbar-item:last-child {
+	margin-left: 0;
+}
+.navigation {
+	text-align: right;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 600;
+}
+.navigation-link {
+	margin-left: 3%;
+	padding: 10px 0;
+}
+.navigation-link:first-child {
+	margin-left: 0;
+}
+.language {
+	padding: 10px 20px;
+}
+.social {
+	display: flex;
+}
+.social-item {
+	padding: 10px 20px;
+}
+.navbar-top-mobile  {
+	background: white;
+	padding: 20px 0;
+	display: none;	
+}
+.navbar-top-mobile .navigation {
+	text-align: center;
+}
+.promo {
+	display: flex;
+	width: 80%;
+	margin: 10px auto 30px;
+	align-items: center;
+}
+.promo-title {
+	width: 40%;
+	text-align: right;
+	line-height: 1;
+}
+.promo-slider {
+	display: flex;
+	min-height: 400px;
+	height: 55vh;
+	width: 40%;
+	background: url(http://prodan-design.com.ua/content/images/projects/201233.jpg) center center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.slider {
+	flex-grow: 1;
+}
+.title {
+	flex-wrap: wrap;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 2px;
+	font-size: 5vw;
+	color: #242424;
+}
+.subtitle {
+	margin-top: 10px;
+	font-size: 2.4em;
+	color: #242424;
+	font-family: "Gotham Pro";
+	font-weight: 400;
+    font-style: normal;
+}
+.image-shade {
+	min-height: 400px;
+	height: 55vh;
+	width: 50%;
+	position: absolute;
+	z-index: 2;
+	background-image: linear-gradient(to right, rgba(242,242,242,1), rgba(255,255,255,.01));
+}
+.slider-control-right, .slider-control-left {
+	background: rgba(242,242,242,.5);
+	padding: 20px 20px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+
+	cursor: pointer;
+	text-align: center;
+	font-size: 20px;
+	color: #000;
+}
+.slider-control-right:hover, .slider-control-left:hover {
+	background-color: white;
+}
+.slider-control-left {
+	margin-right: 47px;
+}
+.category-select {
+	margin: 60px 0 60px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-weight: 400;
+}
+.category i {
+	padding-left: 10px;
+}
+.gallery {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.gallery-item {
+	width: 49.75%;
+	margin-bottom: 10px;
+	background: url(http://prodan-design.com.ua/content/images/projects/342879.jpg) center;
+	background-size: cover;
+	min-height: 300px;
+	height: 45vh;
+	position: relative;
+}
+.gallery-item-info {
+	display: none;
+	text-align: center;
+	background: rgba(50,50,50,.6);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 2;
+}
+.gallery-item-info-title {
+	color: #9f9f9f;
+	position: absolute;
+	top: 0;
+	margin-top: 30px;
+}
+.gallery-item-info-subtitle {
+	color: white;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+.gallery-item:hover .gallery-item-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+footer {
+	display: flex;
+	justify-content: space-between;
+	width: 85%;	
+	margin: 10px auto;
+}
+.footer-contacts {
+	display: flex;
+	flex-direction: column;
+	text-transform: capitalize;
+	font-weight: normal;
+	line-height: 155%;
+}
+.footer-contacts a {
+	border-bottom: 1px solid black;
+}
+.contacts-item a {
+	text-transform: none;
+}
+.footer-contacts h3, .footer-navbar h3 {
+	margin-bottom: 40px;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 15px;
+}
+.footer-logo img {
+	display: flex;
+	justify-content: center;
+	width: 250px;
+}
+.footer-navbar {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	justify-content: flex-end;
+}
+.footer-navbar .navigation-link {
+font-family: 'Gotham Pro';
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14px;
+	margin-left: 30px;
+	text-transform: uppercase;
+}
+.social  .facebook{
+	padding-left: 0;
+}
+
+.copyright {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #242424;
+	padding: 15px 7.5% ;
+	color: #565656;
+	font-size: 12px;
+}
+@media screen and (max-width: 1000px) {
+	.header {
+		padding: 0;
+	}
+	 .navbar-item-language, .navbar-item-social, .promo, .navbar-top, .footer-logo, .footer-navbar {
+	 	display: none;
+	 }
+	.header {
+		flex-direction: column-reverse;
+	}
+	.header-item-logo {
+		width: 100%;
+	}
+	.header-item-logo a {
+		display: inline-block;
+		background: url(http://prodan-design.com.ua/content/images/logo.png) center no-repeat;
+		background-size: contain;
+		width: 100%;
+		height: 220px;
+	}
+	.navbar-top-mobile {
+		display: block;
+		overflow: hidden;
+		width: 100%;
+	}
+	.header.active {
+		position: static;
+	}
+	.burger {
+		display: flex;
+		width: 40px;
+		height: 30px;
+		margin-left: calc(98% - 40px);
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.burger-item {
+		width: 100%;
+		height: 4px;
+		background-color: black;
+		
+	}
+	.burger-active {
+		position: relative;
+		justify-content: center;
+	}
+	.burger-active .burger-item {
+		transition: all .5s ease-in-out;
+		position: absolute;
+	}
+	.burger-active .burger-item:nth-child(1) {
+		transform: rotate(135deg);
+
+	}
+	.burger-active .burger-item:nth-child(2) {
+		transform: translateX(-50px);
+		opacity: 0;
+		
+	}
+	.burger-active .burger-item:nth-child(3) {
+		transform: rotate(-135deg);
+		
+	}
+	.gallery-item:hover .gallery-item-info{
+		display: block;
+	}
+	.gallery {
+		flex-wrap: wrap;
+	}
+	.gallery-item {
+		width: 100%;
+		min-height: 400px;
+		height: 55vh;
+	}
+	.gallery-item-info {
+		display: block;
+		top: 0;
+		right: 0;
+		background: 0 0;
+	}
+	.gallery-item-info-title {
+		position: relative;
+		color: rgba(255,255,255,.5);
+		letter-spacing: 3px;
+}
+	.gallery-item-info-subtitle {
+		background: white;
+		color: black;
+		display: block;
+		padding: 12px;
+		width: 100%;
+		letter-spacing: 3px;
+		font-weight: 500;
+	}
+	.gallery-item-info .gallery-item-info-subtitle {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	.footer {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.footer .footer-contacts {
+		width: 100%;
+	}
+	.footer-social {
+		display: flex;
+		justify-content: space-between;
+	}
+	.footer-social .social-item {
+		background: #fff;
+		text-align: center;
+		width: 49.5%;
+		font-size: 40px;
+		padding: 10px;
+	}
+	.copyright {
+		flex-direction: column;
+		text-align: center;
+	}
+	.navbar-top-mobile .navigation {
+	display: flex;
+	flex-direction: column;
+	max-height: 0;
+	overflow-y: hidden;
+	transition: max-height .4s ease-in-out;
+	}
+	.navbar-top-mobile .navigation .navigation-link {
+		margin-left: 0;
+		margin-top: 10px;
+		display: block;
+	}
+	.navbar-top-mobile .navigation-active  {
+		text-align: center;
+		max-height: 320px;
+		display: block;
+	}
+	
+}
